@@ -19,7 +19,7 @@
                     <checksumAlgorithm>MD5</checksumAlgorithm>
                 </configuration>
             </plugin>
-            <plugin>
+           <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${springboot.version}</version>
@@ -57,7 +57,7 @@
                     </overlays>
                 </configuration>
             </plugin>
-            <plugin>
+           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
@@ -82,11 +82,14 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apereo.cas/cas-server-support-jdbc-drivers -->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-jdbc-drivers</artifactId>
-            <version>${cas.version}</version>
+            <version>5.3.10</version>
+            <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-jdbc</artifactId>
@@ -159,7 +162,7 @@
             </properties>
             <build>
                 <plugins>
-                    <plugin>
+                   <plugin>
                     <groupId>com.soebes.maven.plugins</groupId>
                     <artifactId>echo-maven-plugin</artifactId>
                     <version>0.3.0</version>
@@ -208,8 +211,8 @@
             <id>pgp</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>com.github.s4u.plugins</groupId>
+<!--                    <plugin>-->
+<!--                        <groupId>com.github.s4u.plugins</groupId>
                         <artifactId>pgpverify-maven-plugin</artifactId>
                         <version>1.1.0</version>
                         <executions>
@@ -226,7 +229,7 @@
                             <verifyPomFiles>true</verifyPomFiles>
                             <failNoSignature>false</failNoSignature>
                         </configuration>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>
